@@ -140,6 +140,7 @@ Make sure that Bluetooth is enabled on your laptop and open Connecting to the de
 <p align="center">
   <img src="res/streaming.png" alt="Logo"/>
 </p>
+
 ## License
 
 This project is licensed under the GPLv3 License. See the [LICENSE](LICENSE) file for details.
