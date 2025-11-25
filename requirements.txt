@@ -1,0 +1,13 @@
+PyQt5>=5.15.0
+PyQt5-Frameless-Window>=0.3.3
+bleak==0.22.2
+folium
+PyQtWebEngine
+pandas
+darkdetect
+loguru
+pyqtgraph
+scipy
+pillow
+qasync
+colorthief
