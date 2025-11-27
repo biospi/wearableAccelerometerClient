@@ -147,7 +147,7 @@ Make sure that Bluetooth is enabled on your laptop and open Connecting to the de
   <img src="res/streaming.png" alt="Logo"/>
 </p>
 
-### 4. Data
+### 5. Data
 Once powered on, the device automatically begins recording motion data to an MS Excel–compatible **CSV file**.
 Each row represents one sample collected at a fixed sampling rate.
 A typical data snippet looks like:
