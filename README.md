@@ -82,7 +82,7 @@ If not already formatted, format the micro sd (FAT32)
 > If you choose to create a config.txt file at the root of the micro-SD card, you can override the device’s default sensor and logging behavior.
 > Below is a description of each available parameter.
 
-```bash
+
 | Parameter           | Description                                                                                                                                                |
 | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **xyz_sens**        | Sets the XYZ sensor sensitivity (e.g., accelerometer gain). Higher values make the system more responsive to smaller movements.                            |
@@ -93,7 +93,6 @@ If not already formatted, format the micro sd (FAT32)
 | **no_log**          | When set to `1`, disables logging to the SWD port. When `0`, logging is enabled as normal.                                                                 |
 
 
-```
 ### 2. Charging
 Plug a USB-C cable in the accelerometer port with a standard (5V 1-3A) power source, like a laptop or a smartphone charging brick.
 The LED indicator will light up solid red indicating that the device is charging.
@@ -128,18 +127,47 @@ Connecting to the device via the ["Wearable Accelerometer Desktop Client"](https
 
 Make sure that Bluetooth is enabled on your laptop and open Connecting to the device via the ["Wearable Accelerometer Desktop Client"](https://github.com/biospi/wearableAccelerometerClient/releases/tag/v1.0.0)
 
+1. click the "Scan button"
 <p align="center">
   <img src="res/scan.png" alt="Logo"/>
 </p>
+
+2. Select the "Accelerometer" in the list
 <p align="center">
   <img src="res/connect.png" alt="Logo"/>
 </p>
+
+3.  On the left menu select the gear icon to access the setting menu
 <p align="center">
   <img src="res/setting.png" alt="Logo"/>
 </p>
+
+4. On the left menu select the "arrow down" icon  to access the data streaming menu
 <p align="center">
   <img src="res/streaming.png" alt="Logo"/>
 </p>
+
+### 4. Data
+Once powered on, the device automatically begins recording motion data to an MS Excel–compatible **CSV file**.
+Each row represents one sample collected at a fixed sampling rate.
+A typical data snippet looks like:
+<p align="center"> <img src="res/data.png" alt="Logo"/> </p>
+
+| Column | Name               | Description                                                                                                                                                                                                                                        |
+|--------| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **A**  | **Timestamp**      | A 12-digit timestamp in the format **YYMMDDhhmmss**:<br>• **YY** – year<br>• **MM** – month<br>• **DD** – day<br>• **hh** – hour (24-hour format)<br>• **mm** – minutes<br>• **ss** – seconds<br>Example: `250126043757` → **2025-01-26 04:37:57** |
+| **B**  | **X-axis**         | Raw acceleration value along the X axis (units depend on device configuration, commonly *g* or m/s²).                                                                                                                                              |
+| **C**  | **Y-axis**         | Raw acceleration value along the Y axis.                                                                                                                                                                                                           |
+| **D**  | **Z-axis**         | Raw acceleration value along the Z axis.                                                                                                                                                                                                           |
+| **E**  | **Activity Count** | A derived value representing the estimated activity level at that timestamp.                                                                                                                                            |
+
+A sample cat dataset is available [here](https://github.com/biospi/wearableAccelerometerClient/dataset/data.zip)
+
+> [!CONFIGURATION NOTE]
+> Depending on the device configuration, not all columns may be present.
+For example, if count_only mode is enabled, only the Activity Count column will be recorded in the CSV file.
+
+
 
 ## License
 
