@@ -161,7 +161,7 @@ A typical data snippet looks like:
 | **D**  | **Z-axis**         | Raw acceleration value along the Z axis.                                                                                                                                                                                                           |
 | **E**  | **Activity Count** | A derived value representing the estimated activity level at that timestamp.                                                                                                                                            |
 
-A sample cat dataset is available [here](https://github.com/biospi/wearableAccelerometerClient/dataset/data.zip)
+A sample cat dataset is available [here](https://github.com/biospi/wearableAccelerometerClient/blob/master/dataset/data.zip)
 
 > [!NOTE]
 > Depending on the device configuration, not all columns may be present.
