@@ -163,7 +163,7 @@ A typical data snippet looks like:
 
 A sample cat dataset is available [here](https://github.com/biospi/wearableAccelerometerClient/dataset/data.zip)
 
-> [!CONFIGURATION NOTE]
+> [!NOTE]
 > Depending on the device configuration, not all columns may be present.
 For example, if count_only mode is enabled, only the Activity Count column will be recorded in the CSV file.
 
