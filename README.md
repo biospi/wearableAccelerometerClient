@@ -119,7 +119,7 @@ Connecting to the device via the ["Wearable Accelerometer Desktop Client"](https
 * Configure the accelerometer sensitivity and sampling rate
 * Stream and visualise the accelerometer data in real time
 
-**To enable Bluetooth discovery hold a magnet 5 seconds above the top of the device. The light indicator will blink blue to confirm that the device is now discoverable**
+**To enable Bluetooth discovery hold a magnet 5 seconds above the top of the device and remove it. The light indicator will blink blue to confirm that the device is now discoverable**
 
 <p align="center">
   <img src="res/ble_discovery.gif" alt="Logo"/>
